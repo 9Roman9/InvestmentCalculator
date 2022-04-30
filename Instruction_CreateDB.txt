@@ -1,0 +1,14 @@
+CREATE DATABASE InvestmentCalculator;
+USE InvestmentCalculator;
+CREATE TABLE CentralBanksRates (
+id INT NOT NULL AUTO_INCREMENT,
+Country VARCHAR (10) NOT NULL,
+Rate FLOAT(5,2) NOT NULL,
+PRIMARY KEY(id)
+);
+INSERT INTO CentralBanksRates (Country, Rate)
+VALUES
+("Ukraine",10),
+("Poland",8.5),
+("USA",5.45);
+quit
