@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MyTitle</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+    <table style="width: 100%">
+        <tr>
+            <th th:text="Проект"></th>
+            <th th:text="NPV"></th>
+            <th th:text="IRR"></th>
+            <th th:text="PP"></th>
+        </tr>
+        <tr th:each="project : ${projects}" style="text-align: center">
+            <td th:text="${project.name}" style="text-align: center"></td>
+            <td th:text="${project.NPV}" style="text-align: center"></td>
+            <td th:text="${project.IRR}" style="text-align: center"></td>
+            <td th:text="${project.PP}" style="text-align: center"></td>
+        </tr>
+    </table><br>
+    <div>
+        <form action="/investor">
+            <button type="submit">Головне меню</button>
+        </form>
+    </div>
+</body>
+</html>

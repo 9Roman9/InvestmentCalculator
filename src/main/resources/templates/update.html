@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MyTitle</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+    <div><form id="form_update" action="/investor/update" method="post">
+        <div>
+            <label for="name">Ім'я проекту</label>
+            <input id="name" name="name" type="text">
+        </div><br>
+        <div>
+            <label for="initialInvestment">Сума інвестицій</label>
+            <input id="initialInvestment" name="initialInvestment" type="text">
+        </div><br>
+        <div>
+            <label for="period">Строк проекту (у роках)</label>
+            <input id="period" name="period" type="text">
+        </div>
+        <div>
+            <p>У якому вигляді очікуються грошові надходження?</p>
+            <label for="annuityType">Ануїтет</label>
+            <input id="annuityType" name="cashFlowType" type="radio">
+            <label for="differentType">Різні платежі</label>
+            <input id="differentType" name="cashFlowType" type="radio">
+        </div><br>
+        <div id="cashFlowType"></div>
+        <div id="cashFlowPeriods">
+            <div id="cashFlowOne"><span id="periodDiff"></span></div>
+        </div>
+        <div>
+            <div>Яка ставка дисконтування?</div><br>
+            <label for="discountRateBank">Облікова ставка НБУ</label>
+            <input id="discountRateBank" name="discountRate" type="radio">
+            <label for="customDiscountRate">Власна ставка</label>
+            <input id="customDiscountRate" name="discountRate" type="radio">
+            <div id="discountRate"></div>
+        </div><br>
+        <button type="submit">Оновити</button>
+    </form></div>
+    <script src="/script_update.js"></script>
+</body>
+</html>

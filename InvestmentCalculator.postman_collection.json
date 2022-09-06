@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "0e5748be-6d8d-415c-a69e-dd4ed1ee33f0",
+		"name": "InvestmentCalculator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "menu",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/investor",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"investor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/investor/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"investor",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addProjectWithAnnuityBankRate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/investor/add/{name}?name=Build&initialInvestment=1000&period=4&annuity=200",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"investor",
+						"add",
+						"{name}"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Build"
+						},
+						{
+							"key": "initialInvestment",
+							"value": "1000"
+						},
+						{
+							"key": "period",
+							"value": "4"
+						},
+						{
+							"key": "annuity",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addProjectWithDifferentFlowsBankRate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/investor/add/{name}?name=School&initialInvestment=1000&period=4&differentCashFlow=45,50,65",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"investor",
+						"add",
+						"{name}"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "School"
+						},
+						{
+							"key": "initialInvestment",
+							"value": "1000"
+						},
+						{
+							"key": "period",
+							"value": "4"
+						},
+						{
+							"key": "differentCashFlow",
+							"value": "45,50,65"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addProjectWithDifferentFlowsCustomRate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/investor/add/{name}?name=Securities&initialInvestment=1000&period=4&differentCashFlow=200,500,100&customDiscountRate=9",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"investor",
+						"add",
+						"{name}"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Securities"
+						},
+						{
+							"key": "initialInvestment",
+							"value": "1000"
+						},
+						{
+							"key": "period",
+							"value": "4"
+						},
+						{
+							"key": "differentCashFlow",
+							"value": "200,500,100"
+						},
+						{
+							"key": "customDiscountRate",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addProjectWithAnnuityCustomRate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/investor/add/{name}?name=Hospital&initialInvestment=1000&period=4&annuity=200&customDiscountRate=12",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"investor",
+						"add",
+						"{name}"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hospital"
+						},
+						{
+							"key": "initialInvestment",
+							"value": "1000"
+						},
+						{
+							"key": "period",
+							"value": "4"
+						},
+						{
+							"key": "annuity",
+							"value": "200"
+						},
+						{
+							"key": "customDiscountRate",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/investor/update/{name}?name=Ministry&initialInvestment=1000&period=4&annuity=200",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"investor",
+						"update",
+						"{name}"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ministry"
+						},
+						{
+							"key": "initialInvestment",
+							"value": "1000"
+						},
+						{
+							"key": "period",
+							"value": "4"
+						},
+						{
+							"key": "annuity",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/investor/delete/{name}?name=School",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"investor",
+						"delete",
+						"{name}"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "School"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
