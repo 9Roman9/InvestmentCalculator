@@ -1,5 +1,6 @@
 package com.roman.InvestmentCalculator.controller;
 
+import com.roman.InvestmentCalculator.InvestmentCalculatorApplication;
 import com.roman.InvestmentCalculator.model.InvestmentManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -81,5 +82,10 @@ public class MyController {
     @PostMapping(value = {"/add","/update"})
     public String absentName(){
         return "exceptions/absentName";
+    }
+
+    @GetMapping("/exit")
+    public void exit(){
+        InvestmentCalculatorApplication.finishApp();
     }
 }

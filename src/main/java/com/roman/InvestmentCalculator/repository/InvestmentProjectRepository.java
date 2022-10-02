@@ -15,7 +15,7 @@ public interface InvestmentProjectRepository extends CrudRepository<InvestmentPr
     void update(@RequestParam("name") String name, @RequestParam("pp") int pp, @RequestParam("npv") BigDecimal npv, @RequestParam("irr") double irr);
 
     @Modifying
-    @Query(value = "delete project p where p.name = :name", nativeQuery = true)
+    @Query(value = "delete from project p where p.name = :name", nativeQuery = true)
     void deleteByName(@RequestParam("name") String name);
 
     @Query(value = "select * from project p where p.name = :name", nativeQuery = true)
